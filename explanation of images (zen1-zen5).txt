@@ -1,0 +1,17 @@
+1). image zen1.jpg shows the source code and its execution on jupyter notebook.
+    importing the various required libraries . using a delay of 60 seconds to append 
+    each new value to the server . mentioning the specific write which is provided 
+    by the thingspeak channel in the API keys section .
+
+2). image zen2.jpg shows the execution of code and sending the values to the server 
+    of thingspeak channel after the time delay of every 60 seconds .
+
+3). image zen3.jpg shows the channel stats after 22 minutes of execution of code 
+    and the data is represented in form of matlab visualisation .
+
+4). image zen4.jpg shows that how we can export the recent data in various file
+    formats such as JSON , XML and CSV formats. 
+
+5). image zen5.jpg shows that how we can import the CSV file into the server of 
+    thingspeak channel in our case the file is "dataset.csv". and the bottom portion 
+    of the page shows that how we can download the channels feeds in CSV format. 
