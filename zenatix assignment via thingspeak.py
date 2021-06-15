@@ -1,27 +1,12 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": 1,
-   "id": "e2781dfa",
-   "metadata": {},
-   "outputs": [],
-   "source": [
+
     "import urllib.request\n",
     "import requests\n",
     "import threading\n",
     "import json\n",
     "\n",
     "import random"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 4,
-   "id": "6e907757",
-   "metadata": {},
-   "outputs": [
-    {
+   
+     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
@@ -44,36 +29,25 @@
     "    \n",
     "if __name__ == '__main__':\n",
     "    thingspeak_post()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "6cf9d6e7",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.8.8"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+  
+
+import urllib.request
+import requests
+import threading
+import json
+
+import random
+
+def thingspeak_post():
+    threading.Timer(60,thingspeak_post).start()
+    val=random.randint(1,30)
+    URl='https://api.thingspeak.com/update?api_key='
+    KEY='98EQEIARXL1TDRMA'
+    HEADER='&field1={}&field2={}'.format(val,val)
+    NEW_URL = URl+KEY+HEADER
+    print(NEW_URL)
+    data=urllib.request.urlopen(NEW_URL)
+    print(data)
+    
+if __name__ == '__main__':
+    thingspeak_post()
